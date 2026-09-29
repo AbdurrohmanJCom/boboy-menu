@@ -1,3 +1,16 @@
+# Node.js — installed by `npm install`, never commit
 node_modules/
-data/
+npm-debug.log*
+.npm/
+
+# Database and photos (data/menu.db, data/uploads/) ARE committed.
+# Only temporary SQLite files and the login-cookie key are skipped:
+data/menu.db-wal
+data/menu.db-shm
+data/menu.db-journal
+data/.secret
+
+# Archives, OS junk
 *.zip
+.DS_Store
+Thumbs.db

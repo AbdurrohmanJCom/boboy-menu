@@ -2,7 +2,7 @@
 (() => {
   'use strict';
 
-  const IDLE_MS = 45_000;          // back to the splash after 60 s without touches
+  const IDLE_MS = 45_000;          // back to the splash after 45 s without touches
   const POLL_MS = 45_000;          // check the admin for menu changes every minute
   const LANGS = [
     { code: 'uz',  label: "O'zb" },

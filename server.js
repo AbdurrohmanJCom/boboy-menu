@@ -19,7 +19,8 @@ fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 
 // ---------------------------------------------------------------- database
 const db = new DatabaseSync(path.join(DATA_DIR, 'menu.db'));
-db.exec('PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON;');
+// DELETE journal mode: every change is written straight into menu.db, so the file can be committed to git as-is
+db.exec('PRAGMA journal_mode = DELETE; PRAGMA foreign_keys = ON;');
 // db.transaction(fn) returns a function that runs fn inside BEGIN/COMMIT
 db.transaction = (fn) => (...args) => {
   db.exec('BEGIN');
@@ -125,6 +126,27 @@ function menuVersion() {
                         || '-' || IFNULL((SELECT value FROM settings WHERE key='cat_version'), '0') AS v`).get();
   return r.v;
 }
+// ---------------------------------------------------------------- photo cleanup
+// A photo file is deleted once no dish and no category uses it any more.
+const isUsed = (f) => !!db.prepare('SELECT 1 FROM items WHERE photo = ? UNION SELECT 1 FROM categories WHERE photo = ? LIMIT 1').get(f, f);
+function removeIfUnused(file) {
+  if (!file || isUsed(file)) return;
+  try { fs.unlinkSync(path.join(UPLOAD_DIR, path.basename(file))); } catch {}
+}
+// Uploads that were never saved (form closed with «Отмена») are swept after 1 hour.
+const ORPHAN_AGE_MS = 60 * 60_000;
+function sweepOrphans() {
+  let n = 0;
+  for (const f of fs.readdirSync(UPLOAD_DIR)) {
+    const full = path.join(UPLOAD_DIR, f);
+    try {
+      if (isUsed(f) || Date.now() - fs.statSync(full).mtimeMs < ORPHAN_AGE_MS) continue;
+      fs.unlinkSync(full); n++;
+    } catch {}
+  }
+  if (n) console.log(`[cleanup] removed ${n} unused photo(s)`);
+}
+
 const bumpCats = () => db.prepare(`INSERT INTO settings (key, value) VALUES ('cat_version', ?)
   ON CONFLICT(key) DO UPDATE SET value = excluded.value`).run(String(Date.now()));
 
@@ -253,6 +275,7 @@ app.put('/api/admin/items/:id', requireAdmin, (req, res) => {
     discount_type=@discount_type, discount_value=@discount_value, discount_value2=@discount_value2, hidden=@hidden,
     updated_at=MAX(updated_at + 1, CAST(strftime('%s','now') AS INTEGER))
     WHERE id=@id`).run({ ...v, id: row.id });
+  if (row.photo !== v.photo) removeIfUnused(row.photo);
   res.json(itemOut(db.prepare('SELECT * FROM items WHERE id = ?').get(row.id), true));
 });
 
@@ -270,6 +293,7 @@ app.delete('/api/admin/items/:id', requireAdmin, (req, res) => {
   const row = db.prepare('SELECT * FROM items WHERE id = ?').get(Number(req.params.id));
   if (!row) return res.status(404).json({ error: 'Блюдо не найдено' });
   db.prepare('DELETE FROM items WHERE id = ?').run(row.id);
+  removeIfUnused(row.photo);
   bumpCats();
   res.json({ ok: true });
 });
@@ -308,6 +332,7 @@ app.put('/api/admin/categories/:id', requireAdmin, (req, res) => {
   const photo = 'photo_file' in (req.body || {}) ? photoFile(req.body.photo_file) : row.photo;
   if (photo === undefined) return res.status(400).json({ error: 'Фото не найдено, загрузите заново' });
   db.prepare('UPDATE categories SET name = ?, hidden = ?, photo = ? WHERE id = ?').run(JSON.stringify(name), hidden, photo, row.id);
+  if (row.photo !== photo) removeIfUnused(row.photo);
   bumpCats();
   res.json(catOut(db.prepare('SELECT * FROM categories WHERE id = ?').get(row.id)));
 });
@@ -315,7 +340,9 @@ app.delete('/api/admin/categories/:id', requireAdmin, (req, res) => {
   const id = Number(req.params.id);
   const n = db.prepare('SELECT COUNT(*) AS n FROM items WHERE category_id = ?').get(id).n;
   if (n > 0) return res.status(400).json({ error: `В категории ${n} блюд. Сначала перенесите или удалите их.` });
+  const cat = db.prepare('SELECT photo FROM categories WHERE id = ?').get(id);
   db.prepare('DELETE FROM categories WHERE id = ?').run(id);
+  removeIfUnused(cat?.photo);
   bumpCats();
   res.json({ ok: true });
 });
@@ -334,6 +361,9 @@ app.use((err, req, res, next) => {
   console.error(err);
   res.status(err.code === 'LIMIT_FILE_SIZE' ? 400 : 500).json({ error: err.code === 'LIMIT_FILE_SIZE' ? 'Фото больше 8 МБ' : 'Ошибка сервера' });
 });
+
+sweepOrphans();
+setInterval(sweepOrphans, ORPHAN_AGE_MS).unref();
 
 app.listen(PORT, () => {
   console.log(`BOBOY menu:  http://localhost:${PORT}`);
