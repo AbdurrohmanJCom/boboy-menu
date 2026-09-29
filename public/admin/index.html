@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>BOBOY — Админка</title>
+<link rel="icon" href="/img/brand/logo.png">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+
+<!-- Login -->
+<section id="login" class="login" hidden>
+  <form class="login__box" id="loginForm">
+    <img src="/img/brand/logo.png" alt="BOBOY" class="login__logo">
+    <h1>Админка меню</h1>
+    <label class="field">
+      <span>Пароль</span>
+      <input type="password" id="loginPw" autocomplete="current-password" required>
+    </label>
+    <p class="err" id="loginErr"></p>
+    <button class="btn btn--primary btn--block" type="submit">Войти</button>
+  </form>
+</section>
+
+<!-- Main -->
+<section id="main" class="main" hidden>
+  <header class="bar">
+    <img src="/img/brand/logo.png" alt="BOBOY" class="bar__logo">
+    <div class="bar__title">Админка меню</div>
+    <a class="btn btn--ghost" href="/" target="_blank" rel="noopener">Открыть меню ↗</a>
+    <button class="btn btn--ghost" id="logoutBtn">Выйти</button>
+  </header>
+
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Поиск блюда…" autocomplete="off">
+    <button class="btn" id="addCatBtn">+ Категория</button>
+    <button class="btn btn--primary" id="addItemBtn">+ Блюдо</button>
+  </div>
+
+  <div id="list" class="list"></div>
+</section>
+
+<!-- Item / category editor -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <form class="modal__box" id="editForm" novalidate>
+    <header class="modal__head">
+      <h2 id="modalTitle"></h2>
+      <button type="button" class="x" data-close aria-label="Закрыть">×</button>
+    </header>
+
+    <div class="modal__body">
+      <!-- photo -->
+      <div class="photo" id="photoBox">
+        <div class="photo__preview" id="photoPreview"></div>
+        <div class="photo__actions">
+          <label class="btn">
+            <input type="file" id="photoInput" accept="image/*" hidden>
+            <span id="photoBtnText">Загрузить фото</span>
+          </label>
+          <button type="button" class="btn btn--ghost" id="photoRemove" hidden>Убрать фото</button>
+          <small class="muted" id="photoHint">Фото необязательно</small>
+        </div>
+      </div>
+
+      <!-- languages -->
+      <div class="langtabs" role="tablist" id="langTabs"></div>
+      <div id="langPanes"></div>
+
+      <!-- item only -->
+      <div id="itemFields">
+        <label class="field">
+          <span>Категория</span>
+          <select id="fCategory"></select>
+        </label>
+
+        <div class="row">
+          <label class="field">
+            <span id="priceLabel">Цена, сум</span>
+            <input id="fPrice" inputmode="numeric" placeholder="45 000">
+          </label>
+          <label class="field" id="price2Wrap" hidden>
+            <span>Цена «Дабл», сум</span>
+            <input id="fPrice2" inputmode="numeric" placeholder="47 000">
+          </label>
+        </div>
+        <label class="check"><input type="checkbox" id="fTwoPrices"> Две цены: Сингл / Дабл (для кофе)</label>
+
+        <fieldset class="discount">
+          <legend>Скидка</legend>
+          <div class="seg" id="discSeg">
+            <button type="button" data-v="">Нет</button>
+            <button type="button" data-v="percent">Процент %</button>
+            <button type="button" data-v="price">Новая цена</button>
+          </div>
+          <div class="row" id="discPercent" hidden>
+            <label class="field"><span>Скидка, %</span><input id="fDiscPct" inputmode="numeric" placeholder="10"></label>
+            <div class="field muted" id="discPreview"></div>
+          </div>
+          <div class="row" id="discPrice" hidden>
+            <label class="field"><span id="discPriceLabel">Новая цена, сум</span><input id="fDiscPrice" inputmode="numeric"></label>
+            <label class="field" id="discPrice2Wrap" hidden><span>Новая цена «Дабл», сум</span><input id="fDiscPrice2" inputmode="numeric"></label>
+          </div>
+        </fieldset>
+      </div>
+
+      <label class="check check--stop"><input type="checkbox" id="fHidden"> <span id="hiddenLabel">Скрыть из меню (стоп-лист)</span></label>
+      <p class="err" id="formErr"></p>
+    </div>
+
+    <footer class="modal__foot">
+      <button type="button" class="btn btn--danger-ghost" id="deleteBtn">Удалить</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn btn--ghost" data-close>Отмена</button>
+      <button type="submit" class="btn btn--primary" id="saveBtn">Сохранить</button>
+    </footer>
+
+    <div class="confirm" id="confirm" hidden>
+      <p id="confirmText"></p>
+      <div class="confirm__btns">
+        <button type="button" class="btn btn--ghost" id="confirmNo">Нет</button>
+        <button type="button" class="btn btn--danger" id="confirmYes">Да, удалить</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+<script src="/admin/admin.js"></script>
+</body>
+</html>

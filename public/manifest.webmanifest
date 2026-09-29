@@ -1,0 +1,10 @@
+{
+  "name": "BOBOY — Menu",
+  "short_name": "BOBOY",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#FEF7EF",
+  "theme_color": "#FEF7EF",
+  "icons": [{ "src": "/img/brand/icon-512.png", "sizes": "512x512", "type": "image/png" }]
+}

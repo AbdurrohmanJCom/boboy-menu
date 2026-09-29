@@ -1,0 +1,962 @@
+{
+ "categories": [
+  {
+   "id": "shashlik",
+   "name": {
+    "uz": "Shashliklar",
+    "uzc": "Шашликлар",
+    "ru": "Шашлыки",
+    "en": "Kebabs"
+   },
+   "sort": 0,
+   "photo": "s_460a57bf.jpg"
+  },
+  {
+   "id": "lemonade",
+   "name": {
+    "uz": "Limonadlar",
+    "uzc": "Лимонадлар",
+    "ru": "Лимонады",
+    "en": "Lemonades"
+   },
+   "sort": 1,
+   "photo": null
+  },
+  {
+   "id": "mojito",
+   "name": {
+    "uz": "Mojito",
+    "uzc": "Мохито",
+    "ru": "Мохито",
+    "en": "Mojito"
+   },
+   "sort": 2,
+   "photo": null
+  },
+  {
+   "id": "icetea",
+   "name": {
+    "uz": "Ays ti",
+    "uzc": "Айс ти",
+    "ru": "Айс ти",
+    "en": "Iced tea"
+   },
+   "sort": 3,
+   "photo": null
+  },
+  {
+   "id": "compote",
+   "name": {
+    "uz": "Kompot va ayron",
+    "uzc": "Компот ва айрон",
+    "ru": "Компоты и айран",
+    "en": "Compote & ayran"
+   },
+   "sort": 4,
+   "photo": null
+  },
+  {
+   "id": "milkshake",
+   "name": {
+    "uz": "Milksheyklar",
+    "uzc": "Милкшейклар",
+    "ru": "Милкшейки",
+    "en": "Milkshakes"
+   },
+   "sort": 5,
+   "photo": null
+  },
+  {
+   "id": "smoothie",
+   "name": {
+    "uz": "Smuzi",
+    "uzc": "Смузи",
+    "ru": "Смузи",
+    "en": "Smoothies"
+   },
+   "sort": 6,
+   "photo": null
+  },
+  {
+   "id": "juice",
+   "name": {
+    "uz": "Fresh sharbatlar",
+    "uzc": "Фреш шарбатлар",
+    "ru": "Свежие соки",
+    "en": "Fresh juices"
+   },
+   "sort": 7,
+   "photo": null
+  },
+  {
+   "id": "coffee",
+   "name": {
+    "uz": "Qahva",
+    "uzc": "Қаҳва",
+    "ru": "Кофе",
+    "en": "Coffee"
+   },
+   "sort": 8,
+   "photo": null
+  },
+  {
+   "id": "latte",
+   "name": {
+    "uz": "Qahvasiz latte",
+    "uzc": "Қаҳвасиз латте",
+    "ru": "Не кофе",
+    "en": "Non-coffee lattes"
+   },
+   "sort": 9,
+   "photo": null
+  },
+  {
+   "id": "icedcoffee",
+   "name": {
+    "uz": "Sovuq qahva",
+    "uzc": "Совуқ қаҳва",
+    "ru": "Холодный кофе",
+    "en": "Iced coffee"
+   },
+   "sort": 10,
+   "photo": null
+  }
+ ],
+ "items": [
+  {
+   "category": "shashlik",
+   "photo": "s_9c104c9b.jpg",
+   "excel": [
+    "БАРАНИНА \"СЕМЕЧКИ\""
+   ],
+   "name": {
+    "uz": "Qo'y go'shti «Semechki»",
+    "uzc": "Қўй гўшти «Семечки»",
+    "ru": "Баранина «Семечки»",
+    "en": "Lamb “Semechki” kebab"
+   },
+   "description": {
+    "uz": "Xushbo'y ziravorlar bilan qizarguncha pishirilgan yumshoq qo'y go'shti — to'yimli go'sht ta'mi.",
+    "uzc": "Хушбўй зираворлар билан қизаргунча пиширилган юмшоқ қўй гўшти — тўйимли гўшт таъми.",
+    "ru": "Нежная баранина, обжаренная до румяной корочки, с ароматными специями - насыщенный мясной вкус.",
+    "en": "Tender lamb grilled to a golden crust with aromatic spices — a rich, meaty flavour."
+   },
+   "price": 65000,
+   "price2": null,
+   "sort": 0
+  },
+  {
+   "category": "shashlik",
+   "photo": "s_5e2a6d23.jpg",
+   "excel": [
+    "БАРАНИНА КУСКОВОЙ"
+   ],
+   "name": {
+    "uz": "Qo'y go'shti (bo'lakli)",
+    "uzc": "Қўй гўшти (бўлакли)",
+    "ru": "Баранина кусковой",
+    "en": "Lamb chunk kebab"
+   },
+   "description": {
+    "uz": "Katta bo'laklarga to'g'ralgan va xushbo'y ziravorlar bilan qizarguncha pishirilgan yumshoq qo'y go'shti.",
+    "uzc": "Катта бўлакларга тўғралган ва хушбўй зираворлар билан қизаргунча пиширилган юмшоқ қўй гўшти.",
+    "ru": "Нежная баранина, нарезанная крупными кусочками и обжаренная до румяной корочки с ароматными специями.",
+    "en": "Tender lamb cut into large pieces and grilled to a golden crust with aromatic spices."
+   },
+   "price": 63000,
+   "price2": null,
+   "sort": 1
+  },
+  {
+   "category": "shashlik",
+   "photo": "s_6333c321.jpg",
+   "excel": [
+    "ГОВЯДИНА КУСКОВОЙ"
+   ],
+   "name": {
+    "uz": "Mol go'shti (bo'lakli)",
+    "uzc": "Мол гўшти (бўлакли)",
+    "ru": "Говядина кусковой",
+    "en": "Beef chunk kebab"
+   },
+   "description": {
+    "uz": "Bo'laklarga to'g'ralgan va xushbo'y ziravorlar bilan qizarguncha pishirilgan yumshoq mol go'shti.",
+    "uzc": "Бўлакларга тўғралган ва хушбўй зираворлар билан қизаргунча пиширилган юмшоқ мол гўшти.",
+    "ru": "Нежная говядина, нарезанная кусочками и обжаренная до румяной корочки с ароматными специями.",
+    "en": "Tender beef cut into pieces and grilled to a golden crust with aromatic spices."
+   },
+   "price": 59000,
+   "price2": null,
+   "sort": 2
+  },
+  {
+   "category": "shashlik",
+   "photo": "s_2ba24f67.jpg",
+   "excel": [
+    "КОРЕЙКА ИЗ ЯГНЕНКА"
+   ],
+   "name": {
+    "uz": "Qo'zichoq qovurg'asi",
+    "uzc": "Қўзичоқ қовурғаси",
+    "ru": "Корейка из ягненка",
+    "en": "Lamb rack"
+   },
+   "description": {
+    "uz": "Xushbo'y ziravorlar bilan qizarguncha pishirilgan yumshoq qo'zichoq go'shti.",
+    "uzc": "Хушбўй зираворлар билан қизаргунча пиширилган юмшоқ қўзичоқ гўшти.",
+    "ru": "Нежная ягнятина с ароматными специями, приготовленная до румяной корочки.",
+    "en": "Tender lamb with aromatic spices, grilled to a golden crust."
+   },
+   "price": 159000,
+   "price2": null,
+   "sort": 3
+  },
+  {
+   "category": "shashlik",
+   "photo": "s_bdc5fb15.jpg",
+   "excel": [
+    "МОЛОТЫЙ ТАШКЕНТ",
+    "МОЛОТЫЙ ГИЖДУВОН"
+   ],
+   "name": {
+    "uz": "Qiyma kabob",
+    "uzc": "Қийма кабоб",
+    "ru": "Молотый",
+    "en": "Minced meat kebab"
+   },
+   "description": {
+    "uz": "Piyoz va ziravorlar qo'shilgan, qizarguncha pishirilgan shirali qiyma go'sht.",
+    "uzc": "Пиёз ва зираворлар қўшилган, қизаргунча пиширилган ширали қийма гўшт.",
+    "ru": "Сочное рубленое мясо с луком и специями, приготовленное до румяной корочки.",
+    "en": "Juicy minced meat with onion and spices, grilled to a golden crust."
+   },
+   "price": 51000,
+   "price2": null,
+   "sort": 4
+  },
+  {
+   "category": "shashlik",
+   "photo": "s_a6072507.jpg",
+   "excel": [
+    "РУЛЕТ ШАШЛЫК"
+   ],
+   "name": {
+    "uz": "Rulet shashlik",
+    "uzc": "Рулет шашлик",
+    "ru": "Рулет шашлык",
+    "en": "Rolled kebab"
+   },
+   "description": {
+    "uz": "Grilda qizarguncha pishirilgan shirali go'sht — g'ayrioddiy ko'rinishdagi xushbo'y shashlik.",
+    "uzc": "Грилда қизаргунча пиширилган ширали гўшт — ғайриоддий кўринишдаги хушбўй шашлик.",
+    "ru": "Сочное мясо, приготовленное на гриле до румяной корочки - ароматный шашлык в необычной подаче.",
+    "en": "Juicy meat grilled to a golden crust — a fragrant kebab with an unusual presentation."
+   },
+   "price": 65000,
+   "price2": null,
+   "sort": 5
+  },
+  {
+   "category": "shashlik",
+   "photo": "s_a38d47d2.jpg",
+   "excel": [
+    "КУРИНЫЕ БЕДРА"
+   ],
+   "name": {
+    "uz": "Tovuq sonlari",
+    "uzc": "Товуқ сонлари",
+    "ru": "Куриные бедра",
+    "en": "Chicken thigh kebab"
+   },
+   "description": {
+    "uz": "Xushbo'y ziravorlar bilan pishirilgan, qizarib turgan shirali tovuq sonlari.",
+    "uzc": "Хушбўй зираворлар билан пиширилган, қизариб турган ширали товуқ сонлари.",
+    "ru": "Сочные куриные бёдра с румяной корочкой, приготовленные с ароматными специями.",
+    "en": "Juicy chicken thighs with a golden crust, cooked with aromatic spices."
+   },
+   "price": 47000,
+   "price2": null,
+   "sort": 6
+  },
+  {
+   "category": "shashlik",
+   "photo": "s_437a5686.jpg",
+   "excel": [
+    "КУРИНЫЕ КРЫЛЫШКИ"
+   ],
+   "name": {
+    "uz": "Tovuq qanotchalari",
+    "uzc": "Товуқ қанотчалари",
+    "ru": "Куриные крылышки",
+    "en": "Chicken wings"
+   },
+   "description": {
+    "uz": "Xushbo'y ziravorlar bilan pishirilgan, qizarib turgan shirali tovuq qanotchalari.",
+    "uzc": "Хушбўй зираворлар билан пиширилган, қизариб турган ширали товуқ қанотчалари.",
+    "ru": "Сочные куриные крылышки с румяной корочкой, приготовленные с ароматными специями.",
+    "en": "Juicy chicken wings with a golden crust, cooked with aromatic spices."
+   },
+   "price": 49000,
+   "price2": null,
+   "sort": 7
+  },
+  {
+   "category": "shashlik",
+   "photo": "s_db1a98ec.jpg",
+   "excel": [
+    "ПЕЧЕНЬ"
+   ],
+   "name": {
+    "uz": "Jigar",
+    "uzc": "Жигар",
+    "ru": "Печень",
+    "en": "Liver kebab"
+   },
+   "description": {
+    "uz": "Piyoz va ziravorlar bilan qizarguncha pishirilgan yumshoq jigar.",
+    "uzc": "Пиёз ва зираворлар билан қизаргунча пиширилган юмшоқ жигар.",
+    "ru": "Нежная печень, обжаренная с луком и специями до румяной корочки.",
+    "en": "Tender liver grilled with onion and spices to a golden crust."
+   },
+   "price": 45000,
+   "price2": null,
+   "sort": 8
+  },
+  {
+   "category": "lemonade",
+   "photo": "00686.jpg",
+   "excel": [
+    "КЛАССИК ЛИМОНАД"
+   ],
+   "name": {
+    "uz": "Klassik limonad",
+    "uzc": "Классик лимонад",
+    "ru": "Классический лимонад",
+    "en": "Classic lemonade"
+   },
+   "description": null,
+   "price": 55000,
+   "price2": null,
+   "sort": 9
+  },
+  {
+   "category": "lemonade",
+   "photo": "00689.jpg",
+   "excel": [
+    "МАРАКУЙЯ МАНГО ЛИМОНАД"
+   ],
+   "name": {
+    "uz": "Marakuyya-mango limonadi",
+    "uzc": "Маракуйя-манго лимонади",
+    "ru": "Лимонад маракуйя-манго",
+    "en": "Passion fruit & mango lemonade"
+   },
+   "description": null,
+   "price": 73000,
+   "price2": null,
+   "sort": 10
+  },
+  {
+   "category": "lemonade",
+   "photo": "00679.jpg",
+   "excel": [
+    "ЛИМОНАД КЛУБНИКА ЛИЧИ "
+   ],
+   "name": {
+    "uz": "Qulupnay-lichi limonadi",
+    "uzc": "Қулупнай-личи лимонади",
+    "ru": "Лимонад клубника-личи",
+    "en": "Strawberry & lychee lemonade"
+   },
+   "description": null,
+   "price": 73000,
+   "price2": null,
+   "sort": 11
+  },
+  {
+   "category": "lemonade",
+   "photo": "00688.jpg",
+   "excel": [
+    "КЛУБНИКА С АНАНАСОМ ЛИМОНАД"
+   ],
+   "name": {
+    "uz": "Qulupnay va ananasli limonad",
+    "uzc": "Қулупнай ва ананасли лимонад",
+    "ru": "Лимонад клубника с ананасом",
+    "en": "Strawberry & pineapple lemonade"
+   },
+   "description": null,
+   "price": 59000,
+   "price2": null,
+   "sort": 12
+  },
+  {
+   "category": "mojito",
+   "photo": "00701.jpg",
+   "excel": [
+    "КЛАССИЧЕСКИЙ МОХИТО"
+   ],
+   "name": {
+    "uz": "Klassik mojito",
+    "uzc": "Классик мохито",
+    "ru": "Классический мохито",
+    "en": "Classic mojito"
+   },
+   "description": null,
+   "price": 57000,
+   "price2": null,
+   "sort": 13
+  },
+  {
+   "category": "mojito",
+   "photo": "00700.jpg",
+   "excel": [
+    "КЛУБНИЧНЫЙ МОХИТО"
+   ],
+   "name": {
+    "uz": "Qulupnayli mojito",
+    "uzc": "Қулупнайли мохито",
+    "ru": "Клубничный мохито",
+    "en": "Strawberry mojito"
+   },
+   "description": null,
+   "price": 57000,
+   "price2": null,
+   "sort": 14
+  },
+  {
+   "category": "mojito",
+   "photo": "00699.jpg",
+   "excel": [
+    "МАРАКУЯ МОХИТО"
+   ],
+   "name": {
+    "uz": "Marakuyya mojito",
+    "uzc": "Маракуйя мохито",
+    "ru": "Мохито маракуйя",
+    "en": "Passion fruit mojito"
+   },
+   "description": null,
+   "price": 73000,
+   "price2": null,
+   "sort": 15
+  },
+  {
+   "category": "mojito",
+   "photo": "00702.jpg",
+   "excel": [
+    "RED BULL МОХИТО"
+   ],
+   "name": {
+    "uz": "Red Bull mojito",
+    "uzc": "Red Bull мохито",
+    "ru": "Red Bull мохито",
+    "en": "Red Bull mojito"
+   },
+   "description": null,
+   "price": 73000,
+   "price2": null,
+   "sort": 16
+  },
+  {
+   "category": "icetea",
+   "photo": "00684.jpg",
+   "excel": [
+    "ГИБИСКУС С ВИШНЕЙ АЙС ТИ"
+   ],
+   "name": {
+    "uz": "Gibiskus va olchali ays ti",
+    "uzc": "Гибискус ва олчали айс ти",
+    "ru": "Айс ти гибискус с вишней",
+    "en": "Hibiscus & cherry iced tea"
+   },
+   "description": null,
+   "price": 65000,
+   "price2": null,
+   "sort": 17
+  },
+  {
+   "category": "icetea",
+   "photo": "00682.jpg",
+   "excel": [
+    "ФРУКТОВЫЙ АЙС ТИ"
+   ],
+   "name": {
+    "uz": "Mevali ays ti",
+    "uzc": "Мевали айс ти",
+    "ru": "Фруктовый айс ти",
+    "en": "Fruit iced tea"
+   },
+   "description": null,
+   "price": 65000,
+   "price2": null,
+   "sort": 18
+  },
+  {
+   "category": "compote",
+   "photo": "00681.jpg",
+   "excel": [
+    "АЙРАН"
+   ],
+   "name": {
+    "uz": "Ayron",
+    "uzc": "Айрон",
+    "ru": "Айран",
+    "en": "Ayran"
+   },
+   "description": null,
+   "price": 43000,
+   "price2": null,
+   "sort": 19
+  },
+  {
+   "category": "compote",
+   "photo": "00690.jpg",
+   "excel": [
+    "МИКС КОМПОТ"
+   ],
+   "name": {
+    "uz": "Aralash kompot",
+    "uzc": "Аралаш компот",
+    "ru": "Микс компот",
+    "en": "Mixed fruit compote"
+   },
+   "description": null,
+   "price": 43000,
+   "price2": null,
+   "sort": 20
+  },
+  {
+   "category": "compote",
+   "photo": "00691.jpg",
+   "excel": [
+    "КУРАГА КОМПОТ"
+   ],
+   "name": {
+    "uz": "O'rik qoqi kompoti",
+    "uzc": "Ўрик қоқи компоти",
+    "ru": "Компот из кураги",
+    "en": "Dried apricot compote"
+   },
+   "description": null,
+   "price": 43000,
+   "price2": null,
+   "sort": 21
+  },
+  {
+   "category": "milkshake",
+   "photo": "00703.jpg",
+   "excel": [
+    "КЛУБНИЧНЫЙ МИЛКШЕЙК"
+   ],
+   "name": {
+    "uz": "Qulupnayli milksheyk",
+    "uzc": "Қулупнайли милкшейк",
+    "ru": "Клубничный милкшейк",
+    "en": "Strawberry milkshake"
+   },
+   "description": null,
+   "price": 70000,
+   "price2": null,
+   "sort": 22
+  },
+  {
+   "category": "milkshake",
+   "photo": "00704.jpg",
+   "excel": [
+    "БУЕНО С АРАХИСОМ"
+   ],
+   "name": {
+    "uz": "Yeryong'oqli Bueno",
+    "uzc": "Ерёнғоқли Буено",
+    "ru": "Буено с арахисом",
+    "en": "Bueno peanut shake"
+   },
+   "description": null,
+   "price": 65000,
+   "price2": null,
+   "sort": 23
+  },
+  {
+   "category": "milkshake",
+   "photo": "00705.jpg",
+   "excel": [
+    "КЛАССИЧЕСКИЙ МИЛКШЕЙК"
+   ],
+   "name": {
+    "uz": "Klassik milksheyk",
+    "uzc": "Классик милкшейк",
+    "ru": "Классический милкшейк",
+    "en": "Classic milkshake"
+   },
+   "description": null,
+   "price": 57000,
+   "price2": null,
+   "sort": 24
+  },
+  {
+   "category": "milkshake",
+   "photo": "00707.jpg",
+   "excel": [
+    "ТОФФИ КАРАМЕЛЬ МИЛКШЕЙК"
+   ],
+   "name": {
+    "uz": "Toffi-karamel milksheyk",
+    "uzc": "Тоффи-карамел милкшейк",
+    "ru": "Милкшейк тоффи-карамель",
+    "en": "Toffee caramel milkshake"
+   },
+   "description": null,
+   "price": 70000,
+   "price2": null,
+   "sort": 25
+  },
+  {
+   "category": "smoothie",
+   "photo": "00719.jpg",
+   "excel": [
+    "СМУЗИ МАНГО МАРАКУЙЯ"
+   ],
+   "name": {
+    "uz": "Mango-marakuyya smuzi",
+    "uzc": "Манго-маракуйя смузи",
+    "ru": "Смузи манго-маракуйя",
+    "en": "Mango & passion fruit smoothie"
+   },
+   "description": null,
+   "price": 59000,
+   "price2": null,
+   "sort": 26
+  },
+  {
+   "category": "smoothie",
+   "photo": "00717.jpg",
+   "excel": [
+    "СМУЗИ КЛУБНИКА МАЛИНА"
+   ],
+   "name": {
+    "uz": "Qulupnay-malina smuzi",
+    "uzc": "Қулупнай-малина смузи",
+    "ru": "Смузи клубника-малина",
+    "en": "Strawberry & raspberry smoothie"
+   },
+   "description": null,
+   "price": 47000,
+   "price2": null,
+   "sort": 27
+  },
+  {
+   "category": "smoothie",
+   "photo": "00718.jpg",
+   "excel": [
+    "ЯГОДНЫЙ СМУЗИ"
+   ],
+   "name": {
+    "uz": "Rezavorli smuzi",
+    "uzc": "Резаворли смузи",
+    "ru": "Ягодный смузи",
+    "en": "Berry smoothie"
+   },
+   "description": null,
+   "price": 53000,
+   "price2": null,
+   "sort": 28
+  },
+  {
+   "category": "juice",
+   "photo": "00759.jpg",
+   "excel": [
+    "АПЕЛЬСИНОВЫЙ ФРЕШ"
+   ],
+   "name": {
+    "uz": "Apelsin fresh",
+    "uzc": "Апелсин фреш",
+    "ru": "Апельсиновый фреш",
+    "en": "Fresh orange juice"
+   },
+   "description": null,
+   "price": 92000,
+   "price2": null,
+   "sort": 29
+  },
+  {
+   "category": "juice",
+   "photo": "00757.jpg",
+   "excel": [
+    "ЯБЛОЧНЫЙ ФРЕШ"
+   ],
+   "name": {
+    "uz": "Olma fresh",
+    "uzc": "Олма фреш",
+    "ru": "Яблочный фреш",
+    "en": "Fresh apple juice"
+   },
+   "description": null,
+   "price": 47000,
+   "price2": null,
+   "sort": 30
+  },
+  {
+   "category": "juice",
+   "photo": "00762.jpg",
+   "excel": [
+    "МОРКОВНЫЙ ФРЕШ"
+   ],
+   "name": {
+    "uz": "Sabzi fresh",
+    "uzc": "Сабзи фреш",
+    "ru": "Морковный фреш",
+    "en": "Fresh carrot juice"
+   },
+   "description": null,
+   "price": 35000,
+   "price2": null,
+   "sort": 31
+  },
+  {
+   "category": "juice",
+   "photo": "00763.jpg",
+   "excel": [
+    "ЯБЛОЧНО-МОРКОВНЫЙ ФРЕШ"
+   ],
+   "name": {
+    "uz": "Olma-sabzi fresh",
+    "uzc": "Олма-сабзи фреш",
+    "ru": "Яблочно-морковный фреш",
+    "en": "Fresh apple & carrot juice"
+   },
+   "description": null,
+   "price": 43000,
+   "price2": null,
+   "sort": 32
+  },
+  {
+   "category": "juice",
+   "photo": "00758.jpg",
+   "excel": [
+    "ЯБЛОКО АПЕЛЬСИН МОРКОВЬ"
+   ],
+   "name": {
+    "uz": "Olma, apelsin, sabzi",
+    "uzc": "Олма, апелсин, сабзи",
+    "ru": "Яблоко, апельсин, морковь",
+    "en": "Apple, orange & carrot juice"
+   },
+   "description": null,
+   "price": 49000,
+   "price2": null,
+   "sort": 33
+  },
+  {
+   "category": "coffee",
+   "photo": "00708.jpg",
+   "excel": [
+    "КАПУЧИНО СИНГЛЕ",
+    "КАПУЧИНО ДАББЛ"
+   ],
+   "name": {
+    "uz": "Kapuchino",
+    "uzc": "Капучино",
+    "ru": "Капучино",
+    "en": "Cappuccino"
+   },
+   "description": null,
+   "price": 35000,
+   "price2": 47000,
+   "sort": 34
+  },
+  {
+   "category": "coffee",
+   "photo": "00709.jpg",
+   "excel": [
+    "ЛАТТЕ СИНГЛЕ",
+    "ЛАТТЕ ДАББЛ"
+   ],
+   "name": {
+    "uz": "Latte",
+    "uzc": "Латте",
+    "ru": "Латте",
+    "en": "Latte"
+   },
+   "description": null,
+   "price": 35000,
+   "price2": 47000,
+   "sort": 35
+  },
+  {
+   "category": "coffee",
+   "photo": "00712.jpg",
+   "excel": [
+    "АМЕРИКАНО СИНГЛЕ",
+    "АМЕРИКАНО ДАББЛ"
+   ],
+   "name": {
+    "uz": "Amerikano",
+    "uzc": "Американо",
+    "ru": "Американо",
+    "en": "Americano"
+   },
+   "description": null,
+   "price": 33000,
+   "price2": 39000,
+   "sort": 36
+  },
+  {
+   "category": "coffee",
+   "photo": "00710.jpg",
+   "excel": [
+    "ЭСПРЕССО СИНГЛЕ",
+    "ЭСПРЕССО ДАББЛ"
+   ],
+   "name": {
+    "uz": "Espresso",
+    "uzc": "Эспрессо",
+    "ru": "Эспрессо",
+    "en": "Espresso"
+   },
+   "description": null,
+   "price": 29000,
+   "price2": 35000,
+   "sort": 37
+  },
+  {
+   "category": "coffee",
+   "photo": "00724.jpg",
+   "excel": [
+    "РАФ"
+   ],
+   "name": {
+    "uz": "Raf",
+    "uzc": "Раф",
+    "ru": "Раф",
+    "en": "Raf coffee"
+   },
+   "description": null,
+   "price": 55000,
+   "price2": null,
+   "sort": 38
+  },
+  {
+   "category": "latte",
+   "photo": "00742.jpg",
+   "excel": [
+    "МАТЧА ЛАТТЕ СИНГЛЕ",
+    "МАТЧА ЛАТТЕ ДАББЛ"
+   ],
+   "name": {
+    "uz": "Matcha latte",
+    "uzc": "Матча латте",
+    "ru": "Матча латте",
+    "en": "Matcha latte"
+   },
+   "description": null,
+   "price": 37000,
+   "price2": 49000,
+   "sort": 39
+  },
+  {
+   "category": "latte",
+   "photo": "00743.jpg",
+   "excel": [
+    "РОЗОВЫЙ ЛАТТЕ СИНГЛЕ",
+    "РОЗОВЫЙ ЛАТТЕ ДАББЛ"
+   ],
+   "name": {
+    "uz": "Pushti latte",
+    "uzc": "Пушти латте",
+    "ru": "Розовый латте",
+    "en": "Pink latte"
+   },
+   "description": null,
+   "price": 42000,
+   "price2": 49000,
+   "sort": 40
+  },
+  {
+   "category": "latte",
+   "photo": "00744.jpg",
+   "excel": [
+    "ГОЛУБОЙ МАТЧА СИНГЛЕ",
+    "ГОЛУБОЙ МАТЧА ДАББЛ"
+   ],
+   "name": {
+    "uz": "Moviy matcha",
+    "uzc": "Мовий матча",
+    "ru": "Голубой матча",
+    "en": "Blue matcha latte"
+   },
+   "description": null,
+   "price": 44000,
+   "price2": 51000,
+   "sort": 41
+  },
+  {
+   "category": "icedcoffee",
+   "photo": "00745.jpg",
+   "excel": [
+    "АЙС ЛАТТЕ"
+   ],
+   "name": {
+    "uz": "Ays latte",
+    "uzc": "Айс латте",
+    "ru": "Айс латте",
+    "en": "Iced latte"
+   },
+   "description": null,
+   "price": 49000,
+   "price2": null,
+   "sort": 42
+  },
+  {
+   "category": "icedcoffee",
+   "photo": "00750.jpg",
+   "excel": [
+    "АЙС АМЕРИКАНО"
+   ],
+   "name": {
+    "uz": "Ays amerikano",
+    "uzc": "Айс американо",
+    "ru": "Айс американо",
+    "en": "Iced americano"
+   },
+   "description": null,
+   "price": 45000,
+   "price2": null,
+   "sort": 43
+  },
+  {
+   "category": "icedcoffee",
+   "photo": "00764.jpg",
+   "excel": [
+    "АЙС МАТЧА ЛАТТЕ"
+   ],
+   "name": {
+    "uz": "Ays matcha latte",
+    "uzc": "Айс матча латте",
+    "ru": "Айс матча латте",
+    "en": "Iced matcha latte"
+   },
+   "description": null,
+   "price": 55000,
+   "price2": null,
+   "sort": 44
+  },
+  {
+   "category": "icedcoffee",
+   "photo": "00723.jpg",
+   "excel": [
+    "ФРАППУЧИНО КАРАМЕЛЬНЫЙ"
+   ],
+   "name": {
+    "uz": "Karamelli frappuchino",
+    "uzc": "Карамелли фраппучино",
+    "ru": "Фраппучино карамельный",
+    "en": "Caramel frappuccino"
+   },
+   "description": null,
+   "price": 55000,
+   "price2": null,
+   "sort": 45
+  }
+ ]
+}
