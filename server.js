@@ -177,16 +177,17 @@ const attempts = new Map(); // ip -> {n, until}
 const app = express();
 app.disable('x-powered-by');
 app.use(express.json({ limit: '200kb' }));
+// The host's nginx caches GET responses without no-store (ignoring cookies), which breaks login
+app.use('/api', (req, res, next) => { res.set('Cache-Control', 'no-store'); next(); });
 
 // Public menu (only visible categories/items)
 app.get('/api/menu', (req, res) => {
   const cats = db.prepare('SELECT * FROM categories WHERE hidden = 0 ORDER BY sort, id').all();
   const items = db.prepare(`SELECT i.* FROM items i JOIN categories c ON c.id = i.category_id
                             WHERE i.hidden = 0 AND c.hidden = 0 ORDER BY i.sort, i.id`).all();
-  res.set('Cache-Control', 'no-store');
   res.json({ version: menuVersion(), categories: cats.map(catOut), items: items.map((r) => itemOut(r, false)) });
 });
-app.get('/api/version', (req, res) => { res.set('Cache-Control', 'no-store'); res.json({ version: menuVersion() }); });
+app.get('/api/version', (req, res) => { res.json({ version: menuVersion() }); });
 
 // Auth
 app.post('/api/login', (req, res) => {
@@ -216,7 +217,6 @@ app.get('/api/admin/me', (req, res) => res.json({ authed: isAuthed(req) }));
 app.get('/api/admin/menu', requireAdmin, (req, res) => {
   const cats = db.prepare('SELECT * FROM categories ORDER BY sort, id').all();
   const items = db.prepare('SELECT * FROM items ORDER BY sort, id').all();
-  res.set('Cache-Control', 'no-store');
   res.json({ categories: cats.map(catOut), items: items.map((r) => itemOut(r, true)) });
 });
 

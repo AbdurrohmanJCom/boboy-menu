@@ -52,7 +52,7 @@
   $('#logoutBtn').addEventListener('click', async () => { await api('POST', '/api/logout'); showLogin(); });
 
   async function start() {
-    const me = await fetch('/api/admin/me').then((r) => r.json());
+    const me = await fetch('/api/admin/me', { cache: 'no-store' }).then((r) => r.json());
     if (!me.authed) return showLogin();
     $('#login').hidden = true; $('#main').hidden = false;
     await reload();
