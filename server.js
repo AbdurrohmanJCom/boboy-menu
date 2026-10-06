@@ -236,7 +236,7 @@ app.post('/api/admin/upload', requireAdmin, upload.single('photo'), (req, res) =
 
 function validateItem(b) {
   const name = cleanText(b.name, 120);
-  if (!name || !name.ru && !name.uz) return 'Укажите название хотя бы на русском или узбекском';
+  if (!name) return 'Укажите название хотя бы на одном языке';
   const cat = db.prepare('SELECT id FROM categories WHERE id = ?').get(Number(b.category_id));
   if (!cat) return 'Выберите категорию';
   const price = toPrice(b.price), price2 = toPrice(b.price2);
@@ -315,7 +315,7 @@ app.post('/api/admin/categories/reorder', requireAdmin, (req, res) => {
 
 app.post('/api/admin/categories', requireAdmin, (req, res) => {
   const name = cleanText(req.body?.name, 60);
-  if (!name || !name.ru && !name.uz) return res.status(400).json({ error: 'Укажите название категории' });
+  if (!name) return res.status(400).json({ error: 'Укажите название категории' });
   const sort = db.prepare('SELECT IFNULL(MAX(sort), 0) + 1 AS s FROM categories').get().s;
   const photo = photoFile(req.body?.photo_file);
   if (photo === undefined) return res.status(400).json({ error: 'Фото не найдено, загрузите заново' });
@@ -327,7 +327,7 @@ app.put('/api/admin/categories/:id', requireAdmin, (req, res) => {
   const row = db.prepare('SELECT * FROM categories WHERE id = ?').get(Number(req.params.id));
   if (!row) return res.status(404).json({ error: 'Категория не найдена' });
   const name = req.body?.name ? cleanText(req.body.name, 60) : parse(row.name);
-  if (!name || !name.ru && !name.uz) return res.status(400).json({ error: 'Укажите название категории' });
+  if (!name) return res.status(400).json({ error: 'Укажите название категории' });
   const hidden = 'hidden' in (req.body || {}) ? (req.body.hidden ? 1 : 0) : row.hidden;
   const photo = 'photo_file' in (req.body || {}) ? photoFile(req.body.photo_file) : row.photo;
   if (photo === undefined) return res.status(400).json({ error: 'Фото не найдено, загрузите заново' });

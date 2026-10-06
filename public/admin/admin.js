@@ -300,7 +300,7 @@
     e.preventDefault();
     $('#formErr').textContent = '';
     const name = readLang('name');
-    if (!name.ru && !name.uz) { $('#formErr').textContent = 'Заполните название хотя бы на русском или узбекском.'; selectLang(name.ru ? 'uz' : 'ru'); return; }
+    if (!LANGS.some((l) => name[l.code])) { $('#formErr').textContent = 'Заполните название хотя бы на одном языке.'; selectLang('ru'); return; }
     $('#saveBtn').disabled = true;
     try {
       if (ed.mode === 'cat') {
